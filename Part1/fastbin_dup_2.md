@@ -8,4 +8,4 @@ the challenge provide puts@glibc, thus guilding us toward using one glibc gadget
 
 ![](./fastbin_dup_2-1783818092894.webp)
 
-looking at the libc, 
+looking at the libc, we discover a gadget that take values from Irsp+0x50|... as argv, which is in our array of heap pointer, which meant that we can freely control the heap
