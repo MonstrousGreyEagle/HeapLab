@@ -3,3 +3,9 @@
 the challenge provide no target, which mean that the target is spawning a shell
 
 the challenge provide puts@glibc, thus guilding us toward using one glibc gadget to spawn a shell
+
+![](./fastbin_dup_2-1783818071734.webp)
+
+![](./fastbin_dup_2-1783818092894.webp)
+
+looking at the libc, 
