@@ -15,4 +15,6 @@ this gains us a few great apparatus, including:
 
 because the small bin is a linked list, when IO_flush_all_lockp walk through the chain in IO_list_all, some few bins are treated as file, such as the 0x40 bin, the 0xb0 bin, etc
 
-by forging some fake chunk with fake size and use malloc to 
+by forging some fake chunk with fake size and use malloc to push the fake chunk into the coresponding smallbin, we can guild the IO_FILE chain to our heap
+
+by consodilating a chunk that being freed with a chunk that is live, 
