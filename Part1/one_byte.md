@@ -8,4 +8,6 @@ we are given the option to malloc 16 * 0x60 chunks and to free, edit and read sa
 
 the read option is rather interesting, as we can edit 1 byte more than the requested size
 
-this gains us a few great apparatus
+this gains us a few great apparatus, including:
+
+1. clearing the in_use bit for consodilation, which lead to overlapping chunks, which lead 
