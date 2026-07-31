@@ -17,4 +17,4 @@ because the small bin is a linked list, when IO_flush_all_lockp walk through the
 
 by forging some fake chunk with fake size and use malloc to push the fake chunk into the coresponding smallbin, we can guild the IO_FILE chain to our heap
 
-by consodilating a chunk that being freed with a chunk that is live, 
+by consodilating a chunk that being freed with a chunk that is live, then malloc'ing a chunk out of the hypothetical freed chunk, our live chunk that is consolidated is treated as a freed chunk, linked against the unsorted bin
