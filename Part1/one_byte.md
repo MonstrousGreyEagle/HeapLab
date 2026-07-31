@@ -13,4 +13,6 @@ this gains us a few great apparatus, including:
 1. clearing the in_use bit for consodilation, which leads to overlapping chunks, which leads to UAF
 2. changing the size of a chunk, which let us forge whatever size we want, with the first apparatus 
 
-because the small bin is a linked list, when IO_flush_all_lockp walk through the chain in 
+because the small bin is a linked list, when IO_flush_all_lockp walk through the chain in IO_list_all, some few bins are treated as file, such as the 0x40 bin, the 0xb0 bin, etc
+
+by forging some fake chunk with fake size and use malloc to 
