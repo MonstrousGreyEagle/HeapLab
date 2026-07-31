@@ -19,7 +19,7 @@ by forging some fake chunk with fake size and use malloc to push the fake chunk 
 
 by consodilating a chunk that being freed with a chunk that is live, then malloc'ing a chunk out of the hypothetical freed chunk, our live chunk that is consolidated is treated as a freed chunk, linked against the unsorted bin, or the smallbin with other chunk of the same size. With that, we can leak the address of heap and the address of libc 
 
-back to the fake IO_FILE we forged in the heap, one can mess with the vtable and build a ROP chain to spawn a shell, maybe even a 
+back to the fake IO_FILE we forged in the heap, one can mess with the vtable and build a ROP chain to spawn a shell, maybe even a root shell
 
 ```
 #!/usr/bin/env python3
@@ -214,3 +214,5 @@ if __name__ == "__main__":
     main()
 
 ```
+
+///this exploit spawn a shell
