@@ -10,6 +10,7 @@ the read option is rather interesting, as we can edit 1 byte more than the reque
 
 this gains us a few great apparatus, including:
 
-1. clearing the in_use bit for consodilation, which lead to overlapping chunks, which lead to UAF
+1. clearing the in_use bit for consodilation, which leads to overlapping chunks, which leads to UAF
 2. changing the size of a chunk, which let us forge whatever size we want, with the first apparatus 
-3. 
+
+remembering about the
