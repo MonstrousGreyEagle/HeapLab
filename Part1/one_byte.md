@@ -13,4 +13,4 @@ this gains us a few great apparatus, including:
 1. clearing the in_use bit for consodilation, which leads to overlapping chunks, which leads to UAF
 2. changing the size of a chunk, which let us forge whatever size we want, with the first apparatus 
 
-remembering about the
+because the small bin is a linked list, when IO_flush_all_lockp walk through the chain in 
