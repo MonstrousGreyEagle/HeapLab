@@ -8,6 +8,6 @@ edithing a chunk will null out the byte after our data, effectively granting us 
 
 ![](./poison_null_byte-1785978800948.webp)
 
-and because the binary use libc 2.25, 
+and because the binary use libc 2.25, size vs prev_size check doesnt exist, thus making it possible to
 
 
