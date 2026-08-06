@@ -6,5 +6,8 @@ this challenge let us create up to 14 chunks, and edit, free or read said chunks
 
 edithing a chunk will null out the byte after our data, effectively granting us a way to clear flags in chunks with size that is divisible by 0x100
 
-leveraging said apparatus, we can create fake 
+![](./poison_null_byte-1785978800948.webp)
+
+and because the binary use libc 2.25, 
+
 
