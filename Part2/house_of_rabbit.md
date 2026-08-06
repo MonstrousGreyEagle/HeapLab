@@ -12,4 +12,6 @@ with that, we can commit a fastbin_dup to link our a fake chunk with the age as 
 
 ![](./house_of_rabbit-1785979633205.webp)
 
-then we can trigger consolidate fast bin to push our fake chunk into unsorted bin by 
+then we can trigger consolidate fast bin to push our fake chunk into unsorted bin by freeing the chunk that border the top chunk 
+
+after growing the max_size of the arena by malloc a bunch of 0x20000 chunk, we can then try to change our fake chunk to size 0x8000
