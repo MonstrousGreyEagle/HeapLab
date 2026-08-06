@@ -8,4 +8,8 @@ the challenge let us malloc 4 fast chunks other chunks, while also letting us mo
 
 we are allowed to read 0x10 bytes when the malloc option is used
 
-with that, we can commit a fastbin_dup to link our a fake chunk with
+with that, we can commit a fastbin_dup to link our a fake chunk with the age as the size field to the fastbin 
+
+![](./house_of_rabbit-1785979633205.webp)
+
+then we can trigger consolidate fast bin to push our fake chunk into unsorted bin by 
