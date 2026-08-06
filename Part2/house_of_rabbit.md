@@ -16,4 +16,7 @@ then we can trigger consolidate fast bin to push our fake chunk into unsorted bi
 
 after growing the max_size of the arena by malloc a bunch of 0x20000 chunk, we can then try to change our fake chunk to size 0x80000, and request a chunk of 0x80010 so that our chunk is in the largest largebin, a bin without maximum size request 
 
-then, by cha
+then, by changing our fake chunk to size -0x10, we can malloc a chunk so big that it wraps around the VA and create a freed chunk above our target for us to malloc, and edit the value
+
+```
+```
