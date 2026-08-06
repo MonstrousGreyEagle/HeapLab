@@ -2,5 +2,7 @@
 
 this challenge let us create up to 14 chunks, and edit, free or read said chunks 
 
+![](./poison_null_byte-1785978659887.webp)
 
+edithing a chunk will null out the byte after our data, effectively clearing flags in chunks with size that is
 
