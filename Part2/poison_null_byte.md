@@ -8,6 +8,8 @@ edithing a chunk will null out the byte after our data, effectively granting us 
 
 ![](./poison_null_byte-1785978800948.webp)
 
-and because the binary use libc 2.25, size vs prev_size check doesnt exist, thus making it possible to
+and because the binary use libc 2.25, size vs prev_size check doesnt exist, thus making it possible to create overlapping chunks by clearing pre_inuse, faking prevsize and let the freed chunk consolidate backward, over a live chunk
+
+
 
 
