@@ -1,4 +1,4 @@
-libc 2.27 added mesurements to make sure a chunk is not freed twice under tcache, but it doesnt account for if the chunk belong to two different bins like both tcache and fastbin, thus we can treat that as a double free to again, point our to-be-malloc'd chunk to our target
+libc 2.31 added mesurements to make sure a chunk is not freed twice under tcache, but it doesnt account for if the chunk belong to two different bins like both tcache and fastbin, thus we can treat that as a double free to again, point our to-be-malloc'd chunk to our target
 
 ```
 #!/usr/bin/env python3
