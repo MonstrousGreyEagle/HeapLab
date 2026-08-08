@@ -10,4 +10,6 @@ fortunately, the binary use libc 2.28, which allows us to double free into tcach
 
 because the pointer of freed chunk are not deleted, we can read those freed chunk by having a non-freed chunk (based on the in_use bit of the program) overlap a freed chunk (based on the in_use bit), thus allow us to leak heap_base 
 
-and with heap_base leaked, we can point our fake chunk to the tcache itself and edit tcache metadata, to supress it from pushing freed chunks to tcache bins and create u
+and with heap_base leaked, we can point our fake chunk to the tcache itself and edit tcache metadata, to supress it from pushing freed chunks to tcache bins and create unsorted chunks, by which we can leak libc_base 
+
+then again, with another fake chunk pointed to tcache, we can overwrite one of the tcachebin pointer to the free
